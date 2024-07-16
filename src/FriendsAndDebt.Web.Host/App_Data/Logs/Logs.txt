@@ -1,0 +1,1048 @@
+DEBUG 2024-07-16 21:47:21,424 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2024-07-16 21:47:21,885 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2024-07-16 21:47:21,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: FriendsAndDebt.Web.Host.Startup.FriendsAndDebtWebHostModule, FriendsAndDebt.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: FriendsAndDebt.FriendsAndDebtWebCoreModule, FriendsAndDebt.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: FriendsAndDebt.FriendsAndDebtApplicationModule, FriendsAndDebt.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: FriendsAndDebt.FriendsAndDebtCoreModule, FriendsAndDebt.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,899 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,899 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: FriendsAndDebt.EntityFrameworkCore.FriendsAndDebtEntityFrameworkModule, FriendsAndDebt.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=9.2.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:21,904 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2024-07-16 21:47:22,287 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2024-07-16 21:47:22,287 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2024-07-16 21:47:22,287 [1    ] o.Configuration.LanguageManagementConfig - Converted FriendsAndDebt (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2024-07-16 21:47:22,287 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2024-07-16 21:47:23,160 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: FriendsAndDebt.EntityFrameworkCore.FriendsAndDebtDbContext, FriendsAndDebt.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2024-07-16 21:47:23,273 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2024-07-16 21:47:23,307 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2024-07-16 21:47:23,335 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2024-07-16 21:47:23,337 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: FriendsAndDebt
+DEBUG 2024-07-16 21:47:23,353 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2024-07-16 21:47:23,357 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2024-07-16 21:47:23,361 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[FriendsAndDebt.MultiTenancy.Tenant, FriendsAndDebt.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FriendsAndDebt.Authorization.Users.User, FriendsAndDebt.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2024-07-16 21:47:23,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2024-07-16 21:47:23,375 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.Users.Dto.CreateUserDto
+DEBUG 2024-07-16 21:47:23,378 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.Users.Dto.UserDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.Sessions.Dto.UserLoginInfoDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.Roles.Dto.PermissionDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.MultiTenancy.Dto.TenantDto
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.FriendsAndDebtApp.BoardApp.BoardModel
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.FriendsAndDebtApp.BoardApp.BoardAddMemberModel
+DEBUG 2024-07-16 21:47:23,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - FriendsAndDebt.FriendsAndDebtApp.BoardApp.BoardAddCardModel
+WARN  2024-07-16 21:47:24,670 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Friend'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2024-07-16 21:47:25,330 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`CreationTime`, `e`.`CreatorUserId`, `e`.`DeleterUserId`, `e`.`DeletionTime`, `e`.`DisplayName`, `e`.`IsDeleted`, `e`.`LastModificationTime`, `e`.`LastModifierUserId`, `e`.`Name`
+FROM `Editions` AS `e`
+WHERE `e`.`Name` = 'Standard'
+LIMIT 1
+INFO  2024-07-16 21:47:25,473 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int64), @p8='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Editions` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `IsDeleted`, `LastModificationTime`, `LastModifierUserId`, `Name`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT `Id`
+FROM `Editions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,512 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,543 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,560 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,574 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,588 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,600 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,612 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,623 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,634 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,645 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,656 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,667 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,678 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,688 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,783 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,793 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,805 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,815 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,826 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,838 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,850 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,860 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,871 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,883 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,892 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Languages` AS `l`
+    WHERE `l`.`TenantId` IS NULL AND (`l`.`Name` = @__language_Name_1))
+INFO  2024-07-16 21:47:25,903 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 64), @p5='?' (Size = 128), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Languages` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `DisplayName`, `Icon`, `IsDeleted`, `IsDisabled`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Languages`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,929 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`CreationTime`, `r`.`CreatorUserId`, `r`.`DeleterUserId`, `r`.`DeletionTime`, `r`.`Description`, `r`.`DisplayName`, `r`.`IsDefault`, `r`.`IsDeleted`, `r`.`IsStatic`, `r`.`LastModificationTime`, `r`.`LastModifierUserId`, `r`.`Name`, `r`.`NormalizedName`, `r`.`TenantId`
+FROM `Roles` AS `r`
+WHERE `r`.`TenantId` IS NULL AND (`r`.`Name` = 'Admin')
+LIMIT 1
+INFO  2024-07-16 21:47:25,971 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 128), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int64), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime), @p5='?' (Size = 4000), @p6='?' (Size = 64), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int64), @p12='?' (Size = 32), @p13='?' (Size = 32), @p14='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Roles` (`ConcurrencyStamp`, `CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `Description`, `DisplayName`, `IsDefault`, `IsDeleted`, `IsStatic`, `LastModificationTime`, `LastModifierUserId`, `Name`, `NormalizedName`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+SELECT `Id`
+FROM `Roles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:25,995 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Name`
+FROM `Permissions` AS `p`
+WHERE (`p`.`Discriminator` = 'RolePermissionSetting') AND (`p`.`TenantId` IS NULL AND (`p`.`RoleId` = @__adminRoleForHost_Id_0))
+INFO  2024-07-16 21:47:26,031 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (Size = 21), @p3='?' (DbType = Boolean), @p4='?' (Size = 128), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int64), @p9='?' (Size = 21), @p10='?' (DbType = Boolean), @p11='?' (Size = 128), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime), @p15='?' (DbType = Int64), @p16='?' (Size = 21), @p17='?' (DbType = Boolean), @p18='?' (Size = 128), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = DateTime), @p22='?' (DbType = Int64), @p23='?' (Size = 21), @p24='?' (DbType = Boolean), @p25='?' (Size = 128), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p14, @p15, @p16, @p17, @p18, @p19, @p20);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p21, @p22, @p23, @p24, @p25, @p26, @p27);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,050 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`AuthenticationSource`, `u`.`ConcurrencyStamp`, `u`.`CreationTime`, `u`.`CreatorUserId`, `u`.`DeleterUserId`, `u`.`DeletionTime`, `u`.`EmailAddress`, `u`.`EmailConfirmationCode`, `u`.`IsActive`, `u`.`IsDeleted`, `u`.`IsEmailConfirmed`, `u`.`IsLockoutEnabled`, `u`.`IsPhoneNumberConfirmed`, `u`.`IsTwoFactorEnabled`, `u`.`LastModificationTime`, `u`.`LastModifierUserId`, `u`.`LockoutEndDateUtc`, `u`.`Name`, `u`.`NormalizedEmailAddress`, `u`.`NormalizedUserName`, `u`.`Password`, `u`.`PasswordResetCode`, `u`.`PhoneNumber`, `u`.`SecurityStamp`, `u`.`Surname`, `u`.`TenantId`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE `u`.`TenantId` IS NULL AND (`u`.`UserName` = 'admin')
+LIMIT 1
+INFO  2024-07-16 21:47:26,167 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime), @p7='?' (Size = 256), @p8='?' (Size = 328), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p15='?' (DbType = DateTime), @p16='?' (DbType = Int64), @p17='?' (DbType = DateTime), @p18='?' (Size = 64), @p19='?' (Size = 256), @p20='?' (Size = 256), @p21='?' (Size = 128), @p22='?' (Size = 328), @p23='?' (Size = 32), @p24='?' (Size = 128), @p25='?' (Size = 64), @p26='?' (DbType = Int32), @p27='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`AccessFailedCount`, `AuthenticationSource`, `ConcurrencyStamp`, `CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `EmailAddress`, `EmailConfirmationCode`, `IsActive`, `IsDeleted`, `IsEmailConfirmed`, `IsLockoutEnabled`, `IsPhoneNumberConfirmed`, `IsTwoFactorEnabled`, `LastModificationTime`, `LastModifierUserId`, `LockoutEndDateUtc`, `Name`, `NormalizedEmailAddress`, `NormalizedUserName`, `Password`, `PasswordResetCode`, `PhoneNumber`, `SecurityStamp`, `Surname`, `TenantId`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,190 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__eventData_Entity_Id_1='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreationTime`, `u`.`CreatorUserId`, `u`.`DeleterUserId`, `u`.`DeletionTime`, `u`.`EmailAddress`, `u`.`IsDeleted`, `u`.`LastModificationTime`, `u`.`LastModifierUserId`, `u`.`TenantId`, `u`.`UserId`, `u`.`UserLinkId`, `u`.`UserName`
+FROM `UserAccounts` AS `u`
+WHERE (@__ef_filter__p_0 OR NOT (`u`.`IsDeleted`)) AND (`u`.`TenantId` IS NULL AND (`u`.`UserId` = @__eventData_Entity_Id_1))
+LIMIT 1
+INFO  2024-07-16 21:47:26,215 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int64), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (DbType = Int64), @p11='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserAccounts` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `EmailAddress`, `IsDeleted`, `LastModificationTime`, `LastModifierUserId`, `TenantId`, `UserId`, `UserLinkId`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `UserAccounts`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,243 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserRoles` (`CreationTime`, `CreatorUserId`, `RoleId`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `UserRoles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,262 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Settings` AS `s`
+    WHERE ((`s`.`Name` = @__name_0) AND `s`.`TenantId` IS NULL) AND `s`.`UserId` IS NULL)
+INFO  2024-07-16 21:47:26,283 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 256), @p5='?' (DbType = Int32), @p6='?' (DbType = Int64), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Settings` (`CreationTime`, `CreatorUserId`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`, `UserId`, `Value`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT `Id`
+FROM `Settings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,293 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Settings` AS `s`
+    WHERE ((`s`.`Name` = @__name_0) AND `s`.`TenantId` IS NULL) AND `s`.`UserId` IS NULL)
+INFO  2024-07-16 21:47:26,302 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 256), @p5='?' (DbType = Int32), @p6='?' (DbType = Int64), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Settings` (`CreationTime`, `CreatorUserId`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`, `UserId`, `Value`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT `Id`
+FROM `Settings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,313 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Settings` AS `s`
+    WHERE ((`s`.`Name` = @__name_0) AND `s`.`TenantId` IS NULL) AND `s`.`UserId` IS NULL)
+INFO  2024-07-16 21:47:26,325 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int64), @p4='?' (Size = 256), @p5='?' (DbType = Int32), @p6='?' (DbType = Int64), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Settings` (`CreationTime`, `CreatorUserId`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenantId`, `UserId`, `Value`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT `Id`
+FROM `Settings`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,346 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`ConnectionString`, `t`.`CreationTime`, `t`.`CreatorUserId`, `t`.`DeleterUserId`, `t`.`DeletionTime`, `t`.`EditionId`, `t`.`IsActive`, `t`.`IsDeleted`, `t`.`LastModificationTime`, `t`.`LastModifierUserId`, `t`.`Name`, `t`.`TenancyName`
+FROM `Tenants` AS `t`
+WHERE `t`.`TenancyName` = 'Default'
+LIMIT 1
+INFO  2024-07-16 21:47:26,368 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`CreationTime`, `e`.`CreatorUserId`, `e`.`DeleterUserId`, `e`.`DeletionTime`, `e`.`DisplayName`, `e`.`IsDeleted`, `e`.`LastModificationTime`, `e`.`LastModifierUserId`, `e`.`Name`
+FROM `Editions` AS `e`
+WHERE `e`.`Name` = 'Standard'
+LIMIT 1
+INFO  2024-07-16 21:47:26,394 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 1024), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int64), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int64), @p10='?' (Size = 128), @p11='?' (Size = 64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Tenants` (`ConnectionString`, `CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `EditionId`, `IsActive`, `IsDeleted`, `LastModificationTime`, `LastModifierUserId`, `Name`, `TenancyName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `Tenants`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,410 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `r`.`Id`, `r`.`ConcurrencyStamp`, `r`.`CreationTime`, `r`.`CreatorUserId`, `r`.`DeleterUserId`, `r`.`DeletionTime`, `r`.`Description`, `r`.`DisplayName`, `r`.`IsDefault`, `r`.`IsDeleted`, `r`.`IsStatic`, `r`.`LastModificationTime`, `r`.`LastModifierUserId`, `r`.`Name`, `r`.`NormalizedName`, `r`.`TenantId`
+FROM `Roles` AS `r`
+WHERE (`r`.`TenantId` = @___tenantId_0) AND (`r`.`Name` = 'Admin')
+LIMIT 1
+INFO  2024-07-16 21:47:26,421 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 128), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int64), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime), @p5='?' (Size = 4000), @p6='?' (Size = 64), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int64), @p12='?' (Size = 32), @p13='?' (Size = 32), @p14='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Roles` (`ConcurrencyStamp`, `CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `Description`, `DisplayName`, `IsDefault`, `IsDeleted`, `IsStatic`, `LastModificationTime`, `LastModifierUserId`, `Name`, `NormalizedName`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+SELECT `Id`
+FROM `Roles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,431 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`Name`
+FROM `Permissions` AS `p`
+WHERE (`p`.`Discriminator` = 'RolePermissionSetting') AND ((`p`.`TenantId` = @___tenantId_0) AND (`p`.`RoleId` = @__adminRole_Id_1))
+INFO  2024-07-16 21:47:26,442 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (Size = 21), @p3='?' (DbType = Boolean), @p4='?' (Size = 128), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int64), @p9='?' (Size = 21), @p10='?' (DbType = Boolean), @p11='?' (Size = 128), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime), @p15='?' (DbType = Int64), @p16='?' (Size = 21), @p17='?' (DbType = Boolean), @p18='?' (Size = 128), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+
+INSERT INTO `Permissions` (`CreationTime`, `CreatorUserId`, `Discriminator`, `IsGranted`, `Name`, `RoleId`, `TenantId`)
+VALUES (@p14, @p15, @p16, @p17, @p18, @p19, @p20);
+SELECT `Id`
+FROM `Permissions`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,454 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`AuthenticationSource`, `u`.`ConcurrencyStamp`, `u`.`CreationTime`, `u`.`CreatorUserId`, `u`.`DeleterUserId`, `u`.`DeletionTime`, `u`.`EmailAddress`, `u`.`EmailConfirmationCode`, `u`.`IsActive`, `u`.`IsDeleted`, `u`.`IsEmailConfirmed`, `u`.`IsLockoutEnabled`, `u`.`IsPhoneNumberConfirmed`, `u`.`IsTwoFactorEnabled`, `u`.`LastModificationTime`, `u`.`LastModifierUserId`, `u`.`LockoutEndDateUtc`, `u`.`Name`, `u`.`NormalizedEmailAddress`, `u`.`NormalizedUserName`, `u`.`Password`, `u`.`PasswordResetCode`, `u`.`PhoneNumber`, `u`.`SecurityStamp`, `u`.`Surname`, `u`.`TenantId`, `u`.`UserName`
+FROM `Users` AS `u`
+WHERE (`u`.`TenantId` = @___tenantId_0) AND (`u`.`UserName` = 'admin')
+LIMIT 1
+INFO  2024-07-16 21:47:26,505 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime), @p7='?' (Size = 256), @p8='?' (Size = 328), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p15='?' (DbType = DateTime), @p16='?' (DbType = Int64), @p17='?' (DbType = DateTime), @p18='?' (Size = 64), @p19='?' (Size = 256), @p20='?' (Size = 256), @p21='?' (Size = 128), @p22='?' (Size = 328), @p23='?' (Size = 32), @p24='?' (Size = 128), @p25='?' (Size = 64), @p26='?' (DbType = Int32), @p27='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`AccessFailedCount`, `AuthenticationSource`, `ConcurrencyStamp`, `CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `EmailAddress`, `EmailConfirmationCode`, `IsActive`, `IsDeleted`, `IsEmailConfirmed`, `IsLockoutEnabled`, `IsPhoneNumberConfirmed`, `IsTwoFactorEnabled`, `LastModificationTime`, `LastModifierUserId`, `LockoutEndDateUtc`, `Name`, `NormalizedEmailAddress`, `NormalizedUserName`, `Password`, `PasswordResetCode`, `PhoneNumber`, `SecurityStamp`, `Surname`, `TenantId`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,515 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__eventData_Entity_TenantId_0='?' (DbType = Int32), @__eventData_Entity_Id_1='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreationTime`, `u`.`CreatorUserId`, `u`.`DeleterUserId`, `u`.`DeletionTime`, `u`.`EmailAddress`, `u`.`IsDeleted`, `u`.`LastModificationTime`, `u`.`LastModifierUserId`, `u`.`TenantId`, `u`.`UserId`, `u`.`UserLinkId`, `u`.`UserName`
+FROM `UserAccounts` AS `u`
+WHERE (@__ef_filter__p_0 OR NOT (`u`.`IsDeleted`)) AND ((`u`.`TenantId` = @__eventData_Entity_TenantId_0) AND (`u`.`UserId` = @__eventData_Entity_Id_1))
+LIMIT 1
+INFO  2024-07-16 21:47:26,525 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int64), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (DbType = Int64), @p11='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserAccounts` (`CreationTime`, `CreatorUserId`, `DeleterUserId`, `DeletionTime`, `EmailAddress`, `IsDeleted`, `LastModificationTime`, `LastModifierUserId`, `TenantId`, `UserId`, `UserLinkId`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT `Id`
+FROM `UserAccounts`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,540 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserRoles` (`CreationTime`, `CreatorUserId`, `RoleId`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `UserRoles`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:26,622 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `l`.`Id`, `l`.`CreationTime`, `l`.`CreatorUserId`, `l`.`DeleterUserId`, `l`.`DeletionTime`, `l`.`DisplayName`, `l`.`Icon`, `l`.`IsDeleted`, `l`.`IsDisabled`, `l`.`LastModificationTime`, `l`.`LastModifierUserId`, `l`.`Name`, `l`.`TenantId`
+FROM `Languages` AS `l`
+WHERE (@__ef_filter__p_0 OR NOT (`l`.`IsDeleted`)) AND (@__ef_filter__p_1 OR (`l`.`TenantId` IS NULL))
+INFO  2024-07-16 21:47:26,685 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CreationTime`, `s`.`CreatorUserId`, `s`.`LastModificationTime`, `s`.`LastModifierUserId`, `s`.`Name`, `s`.`TenantId`, `s`.`UserId`, `s`.`Value`
+FROM `Settings` AS `s`
+WHERE (@__ef_filter__p_0 OR (`s`.`TenantId` IS NULL)) AND (`s`.`UserId` IS NULL AND (`s`.`TenantId` IS NULL))
+INFO  2024-07-16 21:47:26,696 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+WARN  2024-07-16 21:47:27,560 [1    ] Microsoft.AspNetCore.Server.Kestrel      - Overriding address(es) 'https://localhost:44311/'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+INFO  2024-07-16 21:47:27,572 [1    ] Microsoft.Hosting.Lifetime               - Now listening on: https://localhost:44311
+INFO  2024-07-16 21:47:27,600 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2024-07-16 21:47:27,601 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2024-07-16 21:47:27,602 [1    ] Microsoft.Hosting.Lifetime               - Content root path: D:\Workspace\FriendsAndDebt\9.2.1\aspnet-core\src\FriendsAndDebt.Web.Host
+INFO  2024-07-16 21:47:28,394 [12   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:28,527 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - - -
+INFO  2024-07-16 21:47:29,704 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FriendsAndDebt.Web.Host.Controllers.HomeController.Index (FriendsAndDebt.Web.Host)'
+INFO  2024-07-16 21:47:29,738 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FriendsAndDebt.Web.Host.Controllers.HomeController (FriendsAndDebt.Web.Host).
+INFO  2024-07-16 21:47:29,832 [11   ] c.Infrastructure.ControllerActionInvoker - Executing action method FriendsAndDebt.Web.Host.Controllers.HomeController.Index (FriendsAndDebt.Web.Host) - Validation state: Valid
+INFO  2024-07-16 21:47:29,837 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action method FriendsAndDebt.Web.Host.Controllers.HomeController.Index (FriendsAndDebt.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.2334ms.
+INFO  2024-07-16 21:47:29,917 [17   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:29,953 [17   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2024-07-16 21:47:29,958 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action FriendsAndDebt.Web.Host.Controllers.HomeController.Index (FriendsAndDebt.Web.Host) in 216.2373ms
+INFO  2024-07-16 21:47:29,960 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FriendsAndDebt.Web.Host.Controllers.HomeController.Index (FriendsAndDebt.Web.Host)'
+INFO  2024-07-16 21:47:29,965 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - 302 0 - 1441.7521ms
+INFO  2024-07-16 21:47:29,972 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger - - -
+INFO  2024-07-16 21:47:30,005 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger - 301 0 - 32.5834ms
+INFO  2024-07-16 21:47:30,009 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - - -
+INFO  2024-07-16 21:47:30,059 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - 200 - text/html;charset=utf-8 50.1822ms
+INFO  2024-07-16 21:47:30,093 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - - -
+INFO  2024-07-16 21:47:30,095 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - - -
+INFO  2024-07-16 21:47:30,100 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - - -
+INFO  2024-07-16 21:47:30,102 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - -
+INFO  2024-07-16 21:47:30,103 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - - -
+INFO  2024-07-16 21:47:30,107 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - - -
+INFO  2024-07-16 21:47:30,109 [19   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - - -
+INFO  2024-07-16 21:47:30,152 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript;+charset=utf-8 54.8388ms
+INFO  2024-07-16 21:47:30,174 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\Workspace\FriendsAndDebt\9.2.1\aspnet-core\src\FriendsAndDebt.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2024-07-16 21:47:30,176 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - 200 3697 text/javascript 80.9710ms
+INFO  2024-07-16 21:47:30,182 [21   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2024-07-16 21:47:30,183 [19   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'D:\Workspace\FriendsAndDebt\9.2.1\aspnet-core\src\FriendsAndDebt.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2024-07-16 21:47:30,185 [19   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - 200 8029 text/javascript 89.9477ms
+INFO  2024-07-16 21:47:30,187 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - 200 144929 text/css 94.1554ms
+INFO  2024-07-16 21:47:30,190 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2024-07-16 21:47:30,192 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 96.5835ms
+INFO  2024-07-16 21:47:30,214 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2024-07-16 21:47:30,215 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 120.4541ms
+INFO  2024-07-16 21:47:30,275 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 166.2228ms
+INFO  2024-07-16 21:47:30,457 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - -
+INFO  2024-07-16 21:47:30,459 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FriendsAndDebt.Web.Host.Controllers.AntiForgeryController.SetCookie (FriendsAndDebt.Web.Host)'
+INFO  2024-07-16 21:47:30,463 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller FriendsAndDebt.Web.Host.Controllers.AntiForgeryController (FriendsAndDebt.Web.Host).
+INFO  2024-07-16 21:47:30,479 [20   ] c.Infrastructure.ControllerActionInvoker - Executing action method FriendsAndDebt.Web.Host.Controllers.AntiForgeryController.SetCookie (FriendsAndDebt.Web.Host) - Validation state: Valid
+INFO  2024-07-16 21:47:30,480 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - -
+INFO  2024-07-16 21:47:30,487 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action method FriendsAndDebt.Web.Host.Controllers.AntiForgeryController.SetCookie (FriendsAndDebt.Web.Host), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 5.6375ms.
+INFO  2024-07-16 21:47:30,510 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `AuditLogs` (`BrowserInfo`, `ClientIpAddress`, `ClientName`, `CustomData`, `Exception`, `ExceptionMessage`, `ExecutionDuration`, `ExecutionTime`, `ImpersonatorTenantId`, `ImpersonatorUserId`, `MethodName`, `Parameters`, `ReturnValue`, `ServiceName`, `TenantId`, `UserId`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT `Id`
+FROM `AuditLogs`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+INFO  2024-07-16 21:47:30,534 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2024-07-16 21:47:30,539 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action FriendsAndDebt.Web.Host.Controllers.AntiForgeryController.SetCookie (FriendsAndDebt.Web.Host) in 73.2198ms
+INFO  2024-07-16 21:47:30,541 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FriendsAndDebt.Web.Host.Controllers.AntiForgeryController.SetCookie (FriendsAndDebt.Web.Host)'
+INFO  2024-07-16 21:47:30,542 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - 200 - application/json;+charset=utf-8 85.0296ms
+INFO  2024-07-16 21:47:30,575 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 94.6946ms
+INFO  2024-07-16 21:47:33,421 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:38,653 [17   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:43,822 [17   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:49,219 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:54,337 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:47:59,546 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:04,757 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:10,360 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (200ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:15,586 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:20,779 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:26,182 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (219ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:31,396 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:37,760 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:43,056 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:48,146 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:53,563 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (218ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:48:58,650 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:03,964 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:09,257 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:14,342 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:19,432 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:24,523 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:29,810 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:35,203 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:40,328 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:45,520 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:50,822 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:49:56,193 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:01,628 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:06,873 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:11,946 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:17,023 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:22,441 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:27,521 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:32,589 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:37,685 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:42,770 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:47,855 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:53,173 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (216ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:50:58,450 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:03,912 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:09,197 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:14,504 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:19,583 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:24,695 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (11ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:31,002 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:37,087 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:42,392 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:47,687 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:52,781 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:51:58,064 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:03,134 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:08,431 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (214ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:13,517 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:18,588 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:23,666 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:28,762 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:34,312 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:39,393 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:44,699 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (15ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:49,774 [11   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:52:55,432 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (218ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:01,004 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:06,206 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:11,501 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:16,591 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:21,766 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:26,848 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:32,128 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:37,202 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:42,285 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:47,817 [19   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:52,888 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:53:57,957 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:03,052 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:08,353 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:13,446 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:18,755 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:27,056 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (217ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:32,139 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:37,445 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:42,740 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:47,816 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:53,312 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:54:58,396 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:03,463 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:08,561 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:13,806 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:18,957 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:24,179 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:29,436 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:34,831 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:40,119 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:45,197 [20   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:50,263 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:55:55,556 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (217ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:56:00,791 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:56:06,009 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:56:12,378 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1
+INFO  2024-07-16 21:56:17,590 [21   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__Now_0='?' (DbType = DateTime), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `b`.`Id`, `b`.`CreationTime`, `b`.`CreatorUserId`, `b`.`IsAbandoned`, `b`.`JobArgs`, `b`.`JobType`, `b`.`LastTryTime`, `b`.`NextTryTime`, `b`.`Priority`, `b`.`TryCount`
+FROM `BackgroundJobs` AS `b`
+WHERE NOT (`b`.`IsAbandoned`) AND (`b`.`NextTryTime` <= @__Now_0)
+ORDER BY `b`.`Priority` DESC, `b`.`TryCount`, `b`.`NextTryTime`
+LIMIT @__p_1

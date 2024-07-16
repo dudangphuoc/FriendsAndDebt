@@ -14,7 +14,4 @@
   <ItemGroup>
     <ProjectReference Include="..\FriendsAndDebt.Core\FriendsAndDebt.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FriendsAndDebtApp\FriendApp\" />
-  </ItemGroup>
 </Project>

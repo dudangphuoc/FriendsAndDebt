@@ -17,10 +17,12 @@ namespace FriendsAndDebt.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .UseCollation("utf8mb4_unicode_ci")
                 .HasAnnotation("ProductVersion", "8.0.4")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            MySqlModelBuilderExtensions.HasCharSet(modelBuilder, "utf8mb4");
+            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
             modelBuilder.Entity("Abp.Application.Editions.Edition", b =>
                 {
@@ -28,10 +30,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -40,18 +42,18 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -59,11 +61,11 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
+                        .HasColumnType("varchar(32)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AbpEditions");
+                    b.ToTable("Editions", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Application.Features.FeatureSetting", b =>
@@ -72,10 +74,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -83,12 +85,12 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("varchar(21)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -96,11 +98,11 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Value")
                         .IsRequired()
                         .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
+                        .HasColumnType("varchar(2000)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AbpFeatures");
+                    b.ToTable("Features", (string)null);
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("FeatureSetting");
 
@@ -113,37 +115,37 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("BrowserInfo")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("ClientIpAddress")
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("ClientName")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("CustomData")
                         .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
+                        .HasColumnType("varchar(2000)");
 
                     b.Property<string>("Exception")
                         .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
+                        .HasColumnType("varchar(2000)");
 
                     b.Property<string>("ExceptionMessage")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<int>("ExecutionDuration")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ExecutionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("ImpersonatorTenantId")
                         .HasColumnType("int");
@@ -153,18 +155,18 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("MethodName")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("Parameters")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<string>("ReturnValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("ServiceName")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -180,7 +182,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserId");
 
-                    b.ToTable("AbpAuditLogs");
+                    b.ToTable("AuditLogs", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.PermissionSetting", b =>
@@ -189,10 +191,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -200,15 +202,15 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("varchar(21)");
 
                     b.Property<bool>("IsGranted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -217,7 +219,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "Name");
 
-                    b.ToTable("AbpPermissions");
+                    b.ToTable("Permissions", (string)null);
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("PermissionSetting");
 
@@ -230,17 +232,17 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -257,7 +259,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "ClaimType");
 
-                    b.ToTable("AbpRoleClaims");
+                    b.ToTable("RoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserAccount", b =>
@@ -266,10 +268,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -278,17 +280,17 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("EmailAddress")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -304,7 +306,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
 
@@ -318,7 +320,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserName");
 
-                    b.ToTable("AbpUserAccounts");
+                    b.ToTable("UserAccounts", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserClaim", b =>
@@ -327,17 +329,17 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -354,7 +356,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "ClaimType");
 
-                    b.ToTable("AbpUserClaims");
+                    b.ToTable("UserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserLogin", b =>
@@ -363,17 +365,17 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("LoginProvider")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("ProviderKey")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -386,14 +388,13 @@ namespace FriendsAndDebt.Migrations
                     b.HasIndex("UserId");
 
                     b.HasIndex("ProviderKey", "TenantId")
-                        .IsUnique()
-                        .HasFilter("[TenantId] IS NOT NULL");
+                        .IsUnique();
 
                     b.HasIndex("TenantId", "UserId");
 
                     b.HasIndex("TenantId", "LoginProvider", "ProviderKey");
 
-                    b.ToTable("AbpUserLogins");
+                    b.ToTable("UserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserLoginAttempt", b =>
@@ -402,33 +403,33 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("BrowserInfo")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("ClientIpAddress")
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("ClientName")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("FailReason")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<byte>("Result")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("tinyint unsigned");
 
                     b.Property<string>("TenancyName")
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -438,7 +439,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("UserNameOrEmailAddress")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
 
@@ -446,7 +447,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenancyName", "UserNameOrEmailAddress", "Result");
 
-                    b.ToTable("AbpUserLoginAttempts");
+                    b.ToTable("UserLoginAttempts", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserOrganizationUnit", b =>
@@ -455,16 +456,16 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<long>("OrganizationUnitId")
                         .HasColumnType("bigint");
@@ -481,7 +482,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserId");
 
-                    b.ToTable("AbpUserOrganizationUnits");
+                    b.ToTable("UserOrganizationUnits", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserRole", b =>
@@ -490,10 +491,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -515,7 +516,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserId");
 
-                    b.ToTable("AbpUserRoles");
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Authorization.Users.UserToken", b =>
@@ -524,18 +525,18 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime?>("ExpireDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -545,7 +546,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("Value")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.HasKey("Id");
 
@@ -553,7 +554,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserId");
 
-                    b.ToTable("AbpUserTokens");
+                    b.ToTable("UserTokens", (string)null);
                 });
 
             modelBuilder.Entity("Abp.BackgroundJobs.BackgroundJobInfo", b =>
@@ -562,35 +563,35 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsAbandoned")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("JobArgs")
                         .IsRequired()
                         .HasMaxLength(1048576)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("JobType")
                         .IsRequired()
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<DateTime?>("LastTryTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("NextTryTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<byte>("Priority")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("tinyint unsigned");
 
                     b.Property<short>("TryCount")
                         .HasColumnType("smallint");
@@ -599,7 +600,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("IsAbandoned", "NextTryTime");
 
-                    b.ToTable("AbpBackgroundJobs");
+                    b.ToTable("BackgroundJobs", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Configuration.Setting", b =>
@@ -608,16 +609,16 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -625,7 +626,7 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -634,7 +635,7 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -643,7 +644,7 @@ namespace FriendsAndDebt.Migrations
                     b.HasIndex("TenantId", "Name", "UserId")
                         .IsUnique();
 
-                    b.ToTable("AbpSettings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("Abp.DynamicEntityProperties.DynamicEntityProperty", b =>
@@ -652,14 +653,14 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("DynamicPropertyId")
                         .HasColumnType("int");
 
                     b.Property<string>("EntityFullName")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -669,10 +670,9 @@ namespace FriendsAndDebt.Migrations
                     b.HasIndex("DynamicPropertyId");
 
                     b.HasIndex("EntityFullName", "DynamicPropertyId", "TenantId")
-                        .IsUnique()
-                        .HasFilter("[EntityFullName] IS NOT NULL AND [TenantId] IS NOT NULL");
+                        .IsUnique();
 
-                    b.ToTable("AbpDynamicEntityProperties");
+                    b.ToTable("DynamicEntityProperties", (string)null);
                 });
 
             modelBuilder.Entity("Abp.DynamicEntityProperties.DynamicEntityPropertyValue", b =>
@@ -681,26 +681,26 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<int>("DynamicEntityPropertyId")
                         .HasColumnType("int");
 
                     b.Property<string>("EntityId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
 
                     b.Property<string>("Value")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DynamicEntityPropertyId");
 
-                    b.ToTable("AbpDynamicEntityPropertyValues");
+                    b.ToTable("DynamicEntityPropertyValues", (string)null);
                 });
 
             modelBuilder.Entity("Abp.DynamicEntityProperties.DynamicProperty", b =>
@@ -709,20 +709,20 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DisplayName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("InputType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Permission")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PropertyName")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -730,10 +730,9 @@ namespace FriendsAndDebt.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("PropertyName", "TenantId")
-                        .IsUnique()
-                        .HasFilter("[PropertyName] IS NOT NULL AND [TenantId] IS NOT NULL");
+                        .IsUnique();
 
-                    b.ToTable("AbpDynamicProperties");
+                    b.ToTable("DynamicProperties", (string)null);
                 });
 
             modelBuilder.Entity("Abp.DynamicEntityProperties.DynamicPropertyValue", b =>
@@ -742,7 +741,7 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<int>("DynamicPropertyId")
                         .HasColumnType("int");
@@ -752,13 +751,13 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("Value")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DynamicPropertyId");
 
-                    b.ToTable("AbpDynamicPropertyValues");
+                    b.ToTable("DynamicPropertyValues", (string)null);
                 });
 
             modelBuilder.Entity("Abp.EntityHistory.EntityChange", b =>
@@ -767,24 +766,24 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("ChangeTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<byte>("ChangeType")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("tinyint unsigned");
 
                     b.Property<long>("EntityChangeSetId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("EntityId")
                         .HasMaxLength(48)
-                        .HasColumnType("nvarchar(48)");
+                        .HasColumnType("varchar(48)");
 
                     b.Property<string>("EntityTypeFullName")
                         .HasMaxLength(192)
-                        .HasColumnType("nvarchar(192)");
+                        .HasColumnType("varchar(192)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -795,7 +794,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("EntityTypeFullName", "EntityId");
 
-                    b.ToTable("AbpEntityChanges");
+                    b.ToTable("EntityChanges", (string)null);
                 });
 
             modelBuilder.Entity("Abp.EntityHistory.EntityChangeSet", b =>
@@ -804,25 +803,25 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("BrowserInfo")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("ClientIpAddress")
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("ClientName")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("ExtensionData")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("ImpersonatorTenantId")
                         .HasColumnType("int");
@@ -832,7 +831,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.Property<string>("Reason")
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -848,7 +847,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "UserId");
 
-                    b.ToTable("AbpEntityChangeSets");
+                    b.ToTable("EntityChangeSets", (string)null);
                 });
 
             modelBuilder.Entity("Abp.EntityHistory.EntityPropertyChange", b =>
@@ -857,32 +856,32 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<long>("EntityChangeId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("NewValue")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("NewValueHash")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("OriginalValue")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("OriginalValueHash")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PropertyName")
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<string>("PropertyTypeFullName")
                         .HasMaxLength(192)
-                        .HasColumnType("nvarchar(192)");
+                        .HasColumnType("varchar(192)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -891,7 +890,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("EntityChangeId");
 
-                    b.ToTable("AbpEntityPropertyChanges");
+                    b.ToTable("EntityPropertyChanges", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Localization.ApplicationLanguage", b =>
@@ -900,10 +899,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -912,25 +911,25 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("Icon")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsDisabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -938,7 +937,7 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -947,7 +946,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "Name");
 
-                    b.ToTable("AbpLanguages");
+                    b.ToTable("Languages", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Localization.ApplicationLanguageText", b =>
@@ -956,10 +955,10 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -967,15 +966,15 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Key")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("LanguageName")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -983,7 +982,7 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Source")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -991,107 +990,107 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Value")
                         .IsRequired()
                         .HasMaxLength(67108864)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
                     b.HasIndex("TenantId", "Source", "LanguageName", "Key");
 
-                    b.ToTable("AbpLanguageTexts");
+                    b.ToTable("LanguageTexts", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Notifications.NotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Data")
                         .HasMaxLength(1048576)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("DataTypeName")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("EntityId")
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("EntityTypeName")
                         .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("varchar(250)");
 
                     b.Property<string>("ExcludedUserIds")
                         .HasMaxLength(131072)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("NotificationName")
                         .IsRequired()
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<byte>("Severity")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("tinyint unsigned");
 
                     b.Property<string>("TargetNotifiers")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<string>("TenantIds")
                         .HasMaxLength(131072)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("UserIds")
                         .HasMaxLength(131072)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AbpNotifications");
+                    b.ToTable("Notifications", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Notifications.NotificationSubscriptionInfo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("EntityId")
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("EntityTypeName")
                         .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("varchar(250)");
 
                     b.Property<string>("NotificationName")
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<string>("TargetNotifiers")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -1105,48 +1104,48 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "NotificationName", "EntityTypeName", "EntityId", "UserId");
 
-                    b.ToTable("AbpNotificationSubscriptions");
+                    b.ToTable("NotificationSubscriptions", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Notifications.TenantNotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Data")
                         .HasMaxLength(1048576)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("DataTypeName")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("EntityId")
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
                         .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
+                        .HasColumnType("varchar(512)");
 
                     b.Property<string>("EntityTypeName")
                         .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("varchar(250)");
 
                     b.Property<string>("NotificationName")
                         .IsRequired()
                         .HasMaxLength(96)
-                        .HasColumnType("nvarchar(96)");
+                        .HasColumnType("varchar(96)");
 
                     b.Property<byte>("Severity")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("tinyint unsigned");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -1155,30 +1154,30 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId");
 
-                    b.ToTable("AbpTenantNotifications");
+                    b.ToTable("TenantNotifications", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Notifications.UserNotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("State")
                         .HasColumnType("int");
 
                     b.Property<string>("TargetNotifiers")
                         .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                        .HasColumnType("varchar(1024)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
 
                     b.Property<Guid>("TenantNotificationId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
@@ -1187,7 +1186,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("UserId", "State", "CreationTime");
 
-                    b.ToTable("AbpUserNotifications");
+                    b.ToTable("UserNotifications", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Organizations.OrganizationUnit", b =>
@@ -1196,15 +1195,15 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasMaxLength(95)
-                        .HasColumnType("nvarchar(95)");
+                        .HasColumnType("varchar(95)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -1213,18 +1212,18 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -1241,7 +1240,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "Code");
 
-                    b.ToTable("AbpOrganizationUnits");
+                    b.ToTable("OrganizationUnits", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Organizations.OrganizationUnitRole", b =>
@@ -1250,16 +1249,16 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<long>("OrganizationUnitId")
                         .HasColumnType("bigint");
@@ -1276,53 +1275,53 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "RoleId");
 
-                    b.ToTable("AbpOrganizationUnitRoles");
+                    b.ToTable("OrganizationUnitRoles", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Webhooks.WebhookEvent", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Data")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
 
                     b.Property<string>("WebhookName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AbpWebhookEvents");
+                    b.ToTable("WebhookEvents", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Webhooks.WebhookSendAttempt", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Response")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("ResponseStatusCode")
                         .HasColumnType("int");
@@ -1331,53 +1330,68 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("int");
 
                     b.Property<Guid>("WebhookEventId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("WebhookSubscriptionId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("WebhookEventId");
 
-                    b.ToTable("AbpWebhookSendAttempts");
+                    b.ToTable("WebhookSendAttempts", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Webhooks.WebhookSubscriptionInfo", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Headers")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Secret")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
 
                     b.Property<string>("WebhookUri")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Webhooks")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AbpWebhookSubscriptions");
+                    b.ToTable("WebhookSubscriptions", (string)null);
+                });
+
+            modelBuilder.Entity("BoardUser", b =>
+                {
+                    b.Property<long>("BoardId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("MembersId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("BoardId", "MembersId");
+
+                    b.HasIndex("MembersId");
+
+                    b.ToTable("BoardMembers", (string)null);
                 });
 
             modelBuilder.Entity("FriendsAndDebt.Authorization.Roles.Role", b =>
@@ -1386,15 +1400,15 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -1403,28 +1417,28 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(5000)
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(5000)");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<bool>("IsDefault")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsStatic")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -1432,12 +1446,12 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
+                        .HasColumnType("varchar(32)");
 
                     b.Property<string>("NormalizedName")
                         .IsRequired()
                         .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
+                        .HasColumnType("varchar(32)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -1452,7 +1466,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "NormalizedName");
 
-                    b.ToTable("AbpRoles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("FriendsAndDebt.Authorization.Users.User", b =>
@@ -1461,22 +1475,22 @@ namespace FriendsAndDebt.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
                     b.Property<string>("AuthenticationSource")
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -1485,80 +1499,80 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("EmailConfirmationCode")
                         .HasMaxLength(328)
-                        .HasColumnType("nvarchar(328)");
+                        .HasColumnType("varchar(328)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsEmailConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsLockoutEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsPhoneNumberConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsTwoFactorEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("LockoutEndDateUtc")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<string>("NormalizedEmailAddress")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("NormalizedUserName")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("PasswordResetCode")
                         .HasMaxLength(328)
-                        .HasColumnType("nvarchar(328)");
+                        .HasColumnType("varchar(328)");
 
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
+                        .HasColumnType("varchar(32)");
 
                     b.Property<string>("SecurityStamp")
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.Property<int?>("TenantId")
                         .HasColumnType("int");
@@ -1566,7 +1580,7 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
 
@@ -1580,23 +1594,23 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "NormalizedUserName");
 
-                    b.ToTable("AbpUsers");
+                    b.ToTable("Users", (string)null);
                 });
 
-            modelBuilder.Entity("FriendsAndDebt.MultiTenancy.Tenant", b =>
+            modelBuilder.Entity("FriendsAndDebt.FAD.Board", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("ConnectionString")
-                        .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
+                    b.Property<string>("Color")
+                        .HasMaxLength(16)
+                        .HasColumnType("varchar(16)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("CreatorUserId")
                         .HasColumnType("bigint");
@@ -1605,19 +1619,213 @@ namespace FriendsAndDebt.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("LastModifierUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(128)
+                        .HasColumnType("varchar(128)");
+
+                    b.Property<long>("OwnerId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.ToTable("Boards");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Card", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<long?>("BoardId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("CreatorUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeleterUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("LastModifierUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("OwnerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(128)
+                        .HasColumnType("varchar(128)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BoardId");
+
+                    b.ToTable("Cards");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Debt", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<long?>("CardId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("CreatorUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CreditorId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DebtorId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeleterUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(128)
+                        .HasColumnType("varchar(128)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("LastModifierUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("SponsorAmount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<long?>("SponsorId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CardId");
+
+                    b.HasIndex("CreditorId");
+
+                    b.HasIndex("DebtorId");
+
+                    b.HasIndex("SponsorId");
+
+                    b.ToTable("Debts");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Friend", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Introduce")
+                        .HasMaxLength(64)
+                        .HasColumnType("varchar(64)");
+
+                    b.Property<bool>("IsApprove")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<long>("OwnerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Friends");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.MultiTenancy.Tenant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConnectionString")
+                        .HasMaxLength(1024)
+                        .HasColumnType("varchar(1024)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("CreatorUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeleterUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("EditionId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
@@ -1625,12 +1833,12 @@ namespace FriendsAndDebt.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("TenancyName")
                         .IsRequired()
                         .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
+                        .HasColumnType("varchar(64)");
 
                     b.HasKey("Id");
 
@@ -1644,7 +1852,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenancyName");
 
-                    b.ToTable("AbpTenants");
+                    b.ToTable("Tenants", (string)null);
                 });
 
             modelBuilder.Entity("Abp.Application.Features.EditionFeatureSetting", b =>
@@ -1656,7 +1864,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("EditionId", "Name");
 
-                    b.ToTable("AbpFeatures");
+                    b.ToTable("Features", (string)null);
 
                     b.HasDiscriminator().HasValue("EditionFeatureSetting");
                 });
@@ -1667,7 +1875,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("TenantId", "Name");
 
-                    b.ToTable("AbpFeatures");
+                    b.ToTable("Features", (string)null);
 
                     b.HasDiscriminator().HasValue("TenantFeatureSetting");
                 });
@@ -1681,7 +1889,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AbpPermissions");
+                    b.ToTable("Permissions", (string)null);
 
                     b.HasDiscriminator().HasValue("RolePermissionSetting");
                 });
@@ -1695,7 +1903,7 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AbpPermissions");
+                    b.ToTable("Permissions", (string)null);
 
                     b.HasDiscriminator().HasValue("UserPermissionSetting");
                 });
@@ -1823,6 +2031,21 @@ namespace FriendsAndDebt.Migrations
                     b.Navigation("WebhookEvent");
                 });
 
+            modelBuilder.Entity("BoardUser", b =>
+                {
+                    b.HasOne("FriendsAndDebt.FAD.Board", null)
+                        .WithMany()
+                        .HasForeignKey("BoardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", null)
+                        .WithMany()
+                        .HasForeignKey("MembersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("FriendsAndDebt.Authorization.Roles.Role", b =>
                 {
                     b.HasOne("FriendsAndDebt.Authorization.Users.User", "CreatorUser")
@@ -1863,6 +2086,71 @@ namespace FriendsAndDebt.Migrations
                     b.Navigation("DeleterUser");
 
                     b.Navigation("LastModifierUser");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Board", b =>
+                {
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Card", b =>
+                {
+                    b.HasOne("FriendsAndDebt.FAD.Board", "Board")
+                        .WithMany("Cards")
+                        .HasForeignKey("BoardId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Board");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Debt", b =>
+                {
+                    b.HasOne("FriendsAndDebt.FAD.Card", null)
+                        .WithMany("Debts")
+                        .HasForeignKey("CardId");
+
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "Creditor")
+                        .WithMany()
+                        .HasForeignKey("CreditorId");
+
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "Debtor")
+                        .WithMany()
+                        .HasForeignKey("DebtorId");
+
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "Sponsor")
+                        .WithMany()
+                        .HasForeignKey("SponsorId");
+
+                    b.Navigation("Creditor");
+
+                    b.Navigation("Debtor");
+
+                    b.Navigation("Sponsor");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Friend", b =>
+                {
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("FriendsAndDebt.MultiTenancy.Tenant", b =>
@@ -1961,6 +2249,16 @@ namespace FriendsAndDebt.Migrations
                     b.Navigation("Settings");
 
                     b.Navigation("Tokens");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Board", b =>
+                {
+                    b.Navigation("Cards");
+                });
+
+            modelBuilder.Entity("FriendsAndDebt.FAD.Card", b =>
+                {
+                    b.Navigation("Debts");
                 });
 #pragma warning restore 612, 618
         }

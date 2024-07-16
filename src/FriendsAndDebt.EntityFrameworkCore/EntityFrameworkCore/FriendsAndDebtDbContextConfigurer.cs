@@ -1,5 +1,4 @@
 using Abp;
-using FriendsAndDebt.FAD;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -13,12 +12,17 @@ namespace FriendsAndDebt.EntityFrameworkCore
     {
         public static void Configure(DbContextOptionsBuilder<FriendsAndDebtDbContext> builder, string connectionString)
         {
-            builder.UseSqlServer(connectionString);
+            //builder.UseSqlServer(connectionString);
+            var serverVersion = Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.29-mysql");
+            builder.UseMySql(connectionString, serverVersion);
         }
 
         public static void Configure(DbContextOptionsBuilder<FriendsAndDebtDbContext> builder, DbConnection connection)
         {
-            builder.UseSqlServer(connection);
+            //var serverVersion = ServerVersion.AutoDetect(connection.ConnectionString);
+            var serverVersion = Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.29-mysql");
+
+            builder.UseMySql(connection, serverVersion);
         }
 
         public static PropertyBuilder<T> HasJsonConversion<T>(this PropertyBuilder<T> propertyBuilder)
@@ -48,22 +52,22 @@ namespace FriendsAndDebt.EntityFrameworkCore
         public static void ConfigureBaseService(this ModelBuilder builder)
         {
             Check.NotNull(builder, nameof(builder));
-            builder.HasSequence<long>("BoardCoderSequence").StartsAt(1);
-            builder.HasSequence<long>("CardCodeSequence").StartsAt(1);
-            builder.Entity<Board>(b =>
-            {
-                b.Property(e => e.BoardCode)
-                .HasDefaultValueSql("CONCAT('Board', FORMAT(NEXT VALUE FOR BoardCoderSequence, '000000000'))")
-                .IsRequired()
-                .HasMaxLength(64);
-            });
-            builder.Entity<Board>(b =>
-            {
-                b.Property(e => e.BoardCode)
-                .HasDefaultValueSql("CONCAT('Card', FORMAT(NEXT VALUE FOR CardCodeSequence, '000000000'))")
-                .IsRequired()
-                .HasMaxLength(64);
-            });
+            //builder.HasSequence<long>("BoardCoderSequence").StartsAt(1);
+            //builder.HasSequence<long>("CardCodeSequence").StartsAt(1);
+            //builder.Entity<Board>(b =>
+            //{
+            //    b.Property(e => e.BoardCode)
+            //    .HasDefaultValueSql("CONCAT('Board', FORMAT(NEXT VALUE FOR BoardCoderSequence, '000000000'))")
+            //    .IsRequired()
+            //    .HasMaxLength(64);
+            //});
+            //builder.Entity<Board>(b =>
+            //{
+            //    b.Property(e => e.BoardCode)
+            //    .HasDefaultValueSql("CONCAT('Card', FORMAT(NEXT VALUE FOR CardCodeSequence, '000000000'))")
+            //    .IsRequired()
+            //    .HasMaxLength(64);
+            //});
         }
 
 

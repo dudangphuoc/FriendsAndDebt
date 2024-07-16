@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Abp.Authorization.Users;
+﻿using Abp.Authorization.Users;
 using Abp.Extensions;
+using System;
+using System.Collections.Generic;
 
 namespace FriendsAndDebt.Authorization.Users
 {
@@ -25,7 +25,6 @@ namespace FriendsAndDebt.Authorization.Users
                 EmailAddress = emailAddress,
                 Roles = new List<UserRole>()
             };
-
             user.SetNormalizedNames();
 
             return user;

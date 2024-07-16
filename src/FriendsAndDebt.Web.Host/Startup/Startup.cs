@@ -1,22 +1,22 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
+﻿using Abp.AspNetCore;
+using Abp.AspNetCore.Mvc.Antiforgery;
+using Abp.AspNetCore.SignalR.Hubs;
+using Abp.Castle.Logging.Log4Net;
+using Abp.Extensions;
+using Castle.Facilities.Logging;
+using FriendsAndDebt.Configuration;
+using FriendsAndDebt.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Castle.Facilities.Logging;
-using Abp.AspNetCore;
-using Abp.AspNetCore.Mvc.Antiforgery;
-using Abp.Castle.Logging.Log4Net;
-using Abp.Extensions;
-using FriendsAndDebt.Configuration;
-using FriendsAndDebt.Identity;
-using Abp.AspNetCore.SignalR.Hubs;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace FriendsAndDebt.Web.Host.Startup
 {
@@ -126,12 +126,11 @@ namespace FriendsAndDebt.Web.Host.Startup
                     Version = _apiVersion,
                     Title = "FriendsAndDebt API",
                     Description = "FriendsAndDebt",
-                    // uncomment if needed TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
                         Name = "FriendsAndDebt",
                         Email = string.Empty,
-                        Url = new Uri("https://twitter.com/aspboilerplate"),
+                        Url = new Uri("https://github.com/dudangphuoc/FriendsAndDebt"),
                     },
                     License = new OpenApiLicense
                     {

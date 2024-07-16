@@ -8,6 +8,7 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <UserSecretsId>d9a1f944-d4d1-46eb-9a06-3636f7790e21</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <None Update="appsettings.json;log4net.config">
@@ -16,6 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.Castle.Log4Net" Version="9.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FriendsAndDebt.Core\FriendsAndDebt.Core.csproj" />
