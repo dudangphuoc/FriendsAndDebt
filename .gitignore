@@ -254,3 +254,5 @@ paket-files/
 src/FriendsAndDebt.Web.Mvc/secrets.json
 src/FriendsAndDebt.Web.Host/secrets.json
 src/FriendsAndDebt.Migrator/secrets.json
+/src/FriendsAndDebt.Web.Host/appsettings.json
+/src/FriendsAndDebt.Migrator/appsettings.json
