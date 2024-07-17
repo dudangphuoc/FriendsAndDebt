@@ -7,9 +7,11 @@ using Abp.Domain.Repositories;
 using FriendsAndDebt.Authorization.Users;
 using FriendsAndDebt.FAD;
 using FriendsAndDebt.Users.Dto;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FriendsAndDebt.FriendsAndDebtApp.BoardApp;
@@ -22,6 +24,7 @@ public class GetBoardModel : EntityDto<long>
 {
 }
 
+[AutoMap(typeof(Board))]
 public class UpdateBoardModel : CreateBoardModel, IEntityDto<long>
 {
     public long Id { get; set; }
@@ -29,6 +32,8 @@ public class UpdateBoardModel : CreateBoardModel, IEntityDto<long>
     [StringLength(Board.MaxNameLength)]
     public string Name { get; set; }
 }
+
+[AutoMap(typeof(Board))]
 
 public class CreateBoardModel
 {
@@ -134,6 +139,14 @@ public interface IProjectAppService : IAsyncCrudAppService<BoardModel, long, Get
 public class BoardAppService(IRepository<Board, long> repository, UserStore userStore, IRepository<Card, long> cardRepository)
     : AsyncCrudAppService<Board, BoardModel, long, GetAllBoardModel, CreateBoardModel, UpdateBoardModel, GetBoardModel, DeleteBoardModel>(repository), IProjectAppService
 {
+    protected override Task<Board> GetEntityByIdAsync(long id)
+    {
+        var entity = Repository.GetAllIncluding(x => x.Owner, x => x.Members, x => x.Cards)
+            .Include(x => x.Cards).ThenInclude(x => x.Debts).FirstOrDefault(x => x.Id == id);
+
+        return Task.FromResult(entity);
+    }
+
     public async Task<BoardModel> AddMembersAsync(BoardAddMemberModel input)
     {
         var entity = Repository.Get(input.Id);
