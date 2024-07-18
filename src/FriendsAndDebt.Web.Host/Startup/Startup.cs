@@ -2,7 +2,6 @@
 using Abp.AspNetCore.Mvc.Antiforgery;
 using Abp.AspNetCore.SignalR.Hubs;
 using Abp.Castle.Logging.Log4Net;
-using Abp.Extensions;
 using Castle.Facilities.Logging;
 using FriendsAndDebt.Configuration;
 using FriendsAndDebt.Identity;
@@ -15,7 +14,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 
 namespace FriendsAndDebt.Web.Host.Startup
@@ -49,22 +47,23 @@ namespace FriendsAndDebt.Web.Host.Startup
             services.AddSignalR();
 
             // Configure CORS for angular2 UI
-            services.AddCors(
-                options => options.AddPolicy(
-                    _defaultCorsPolicyName,
-                    builder => builder
-                        .WithOrigins(
-                            // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
-                            _appConfiguration["App:CorsOrigins"]
-                                .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                                .Select(o => o.RemovePostFix("/"))
-                                .ToArray()
-                        )
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials()
-                )
-            );
+            services.AddCors();
+            //services.AddCors(
+            //    options => options.AddPolicy(
+            //        _defaultCorsPolicyName,
+            //        builder => builder
+            //            .WithOrigins(
+            //                // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
+            //                _appConfiguration["App:CorsOrigins"]
+            //                    .Split(",", StringSplitOptions.RemoveEmptyEntries)
+            //                    .Select(o => o.RemovePostFix("/"))
+            //                    .ToArray()
+            //            )
+            //            .AllowAnyHeader()
+            //            .AllowAnyMethod()
+            //            .AllowCredentials()
+            //    )
+            //);
 
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             ConfigureSwagger(services);
@@ -85,8 +84,12 @@ namespace FriendsAndDebt.Web.Host.Startup
         {
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
-            app.UseCors(_defaultCorsPolicyName); // Enable CORS!
-
+            //app.UseCors(_defaultCorsPolicyName); // Enable CORS!
+            app.UseCors(x => x
+            .SetIsOriginAllowed(origin => true)
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
             app.UseStaticFiles();
 
             app.UseRouting();

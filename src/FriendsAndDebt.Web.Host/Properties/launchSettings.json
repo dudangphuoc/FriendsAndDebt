@@ -11,11 +11,11 @@
     "FriendsAndDebt.Web.Host": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:44311/",
+      "launchUrl": "https://192.168.1.2:44311/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:44311/"
+      "applicationUrl": "https://192.168.1.2:44311/"
     }
   }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Text;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using Abp.AspNetCore;
+﻿using Abp.AspNetCore;
 using Abp.AspNetCore.Configuration;
 using Abp.AspNetCore.SignalR;
 using Abp.Modules;
@@ -12,7 +7,12 @@ using Abp.Zero.Configuration;
 using FriendsAndDebt.Authentication.JwtBearer;
 using FriendsAndDebt.Configuration;
 using FriendsAndDebt.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Text;
 
 namespace FriendsAndDebt
 {
@@ -20,7 +20,7 @@ namespace FriendsAndDebt
          typeof(FriendsAndDebtApplicationModule),
          typeof(FriendsAndDebtEntityFrameworkModule),
          typeof(AbpAspNetCoreModule)
-        ,typeof(AbpAspNetCoreSignalRModule)
+        , typeof(AbpAspNetCoreSignalRModule)
      )]
     public class FriendsAndDebtWebCoreModule : AbpModule
     {
@@ -38,6 +38,7 @@ namespace FriendsAndDebt
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
                 FriendsAndDebtConsts.ConnectionStringName
             );
+
 
             // Use database for language management
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();

@@ -30,14 +30,14 @@ namespace FriendsAndDebt
 
             // Enable this line to create a multi-tenant application.
             Configuration.MultiTenancy.IsEnabled = FriendsAndDebtConsts.MultiTenancyEnabled;
-
+            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
             // Configure roles
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
 
             Configuration.Settings.Providers.Add<AppSettingProvider>();
-            
+
             Configuration.Localization.Languages.Add(new LanguageInfo("fa", "فارسی", "famfamfam-flags ir"));
-            
+
             Configuration.Settings.SettingEncryptionConfiguration.DefaultPassPhrase = FriendsAndDebtConsts.DefaultPassPhrase;
             SimpleStringCipher.DefaultPassPhrase = FriendsAndDebtConsts.DefaultPassPhrase;
         }
