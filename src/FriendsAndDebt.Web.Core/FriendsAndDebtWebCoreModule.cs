@@ -33,6 +33,7 @@ namespace FriendsAndDebt
             _appConfiguration = env.GetAppConfiguration();
         }
 
+
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
@@ -47,7 +48,8 @@ namespace FriendsAndDebt
                  .CreateControllersForAppServices(
                      typeof(FriendsAndDebtApplicationModule).GetAssembly()
                  );
-
+            Configuration.Modules.AbpAspNetCore().DefaultWrapResultAttribute.WrapOnSuccess = false;
+            Configuration.Modules.AbpAspNetCore().DefaultWrapResultAttribute.WrapOnError = false;
             ConfigureTokenAuth();
         }
 

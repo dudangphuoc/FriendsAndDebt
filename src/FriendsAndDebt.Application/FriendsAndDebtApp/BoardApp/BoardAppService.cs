@@ -1,9 +1,10 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using Abp.Authorization.Users;
+using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.UI;
 using FriendsAndDebt.Authorization.Users;
 using FriendsAndDebt.FAD;
 using FriendsAndDebt.Users.Dto;
@@ -34,7 +35,6 @@ public class UpdateBoardModel : CreateBoardModel, IEntityDto<long>
 }
 
 [AutoMap(typeof(Board))]
-
 public class CreateBoardModel
 {
     [StringLength(Board.MaxColorLength)]
@@ -42,9 +42,6 @@ public class CreateBoardModel
 
     [StringLength(Board.MaxNameLength)]
     public string Name { get; set; }
-
-    [StringLength(AbpUserBase.MaxUserNameLength)]
-    public string Owner { get; set; }
 }
 
 public class GetAllBoardModel : PagedAndSortedResultRequestDto
@@ -136,6 +133,7 @@ public interface IProjectAppService : IAsyncCrudAppService<BoardModel, long, Get
     Task<BoardModel> AddMembersAsync(BoardAddMemberModel input);
 }
 
+[AbpAuthorize]
 public class BoardAppService(IRepository<Board, long> repository, UserStore userStore, IRepository<Card, long> cardRepository)
     : AsyncCrudAppService<Board, BoardModel, long, GetAllBoardModel, CreateBoardModel, UpdateBoardModel, GetBoardModel, DeleteBoardModel>(repository), IProjectAppService
 {
@@ -145,6 +143,21 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
             .Include(x => x.Cards).ThenInclude(x => x.Debts).FirstOrDefault(x => x.Id == id);
 
         return Task.FromResult(entity);
+    }
+
+    public override async Task<BoardModel> CreateAsync(CreateBoardModel input)
+    {
+        CheckCreatePermission();
+        if (!AbpSession.UserId.HasValue)
+        {
+            throw new UserFriendlyException("User not found");
+        }
+        var entity = MapToEntity(input);
+        entity.OwnerId = AbpSession.UserId ?? 0;
+        await Repository.InsertAsync(entity);
+        UnitOfWorkManager.Current.SaveChanges();
+
+        return ObjectMapper.Map<BoardModel>(entity);
     }
 
     public async Task<BoardModel> AddMembersAsync(BoardAddMemberModel input)
