@@ -1,9 +1,9 @@
-using System;
-using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using FriendsAndDebt.Authorization.Users;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace FriendsAndDebt.Users.Dto
 {

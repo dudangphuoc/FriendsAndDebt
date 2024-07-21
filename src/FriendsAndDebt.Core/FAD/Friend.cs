@@ -3,6 +3,7 @@ using Abp.Domain.Entities.Auditing;
 using FriendsAndDebt.Authorization.Users;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace FriendsAndDebt.FAD;
 
 public class Friend : AggregateRoot<long>
@@ -45,6 +46,7 @@ public class Board : FullAuditedAggregateRoot<long>
 
     public long OwnerId { get; set; }
 
+    [ForeignKey(nameof(OwnerId))]
     public User Owner { get; set; }
 
     public ICollection<User> Members { get; set; }
@@ -55,7 +57,6 @@ public class Board : FullAuditedAggregateRoot<long>
 
 public class Card : FullAuditedAggregateRoot<long>
 {
-
     public const int MaxTitleLength = 128;
 
     public const int MaxDescriptionLength = 256;
@@ -70,7 +71,8 @@ public class Card : FullAuditedAggregateRoot<long>
 
     public long OwnerId { get; set; }
 
-    public User Owner { get; }
+    [ForeignKey(nameof(OwnerId))]
+    public User CardOwner { get; set; }
 
     public Board Board { get; set; }
 
@@ -87,6 +89,8 @@ public class Debt : FullAuditedAggregateRoot<long>
     public decimal SponsorAmount { get; set; }
 
     public decimal Amount { get; set; }
+
+    public Card Card { get; set; }
 
     //Con nợ
     public User Debtor { get; set; }

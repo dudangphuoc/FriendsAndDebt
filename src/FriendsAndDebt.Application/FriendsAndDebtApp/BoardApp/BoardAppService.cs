@@ -4,6 +4,7 @@ using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.Runtime.Session;
 using Abp.UI;
 using FriendsAndDebt.Authorization.Users;
 using FriendsAndDebt.FAD;
@@ -68,6 +69,7 @@ public class BoardModel : EntityDto<long>
     public List<CardDto> Cards { get; set; }
 }
 
+[AutoMap(typeof(Card))]
 public class CardDto : EntityDto<long>
 {
     [StringLength(Card.MaxTitleLength)]
@@ -77,9 +79,14 @@ public class CardDto : EntityDto<long>
     public string Description { get; set; }
 
     public decimal Amount { get; set; }
+    public long OwnerId { get; set; }
 
     [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-    public UserDto Owner { get; }
+    public UserDto CardOwner { get; }
+
+    public List<DebtDto> Debts { get; set; }
+
+
 }
 
 [AutoMap(typeof(Board))]
@@ -87,6 +94,8 @@ public class BoardAddMemberModel : EntityDto<long>
 {
     public string[] UserNames { get; set; }
 }
+
+
 
 [AutoMap(typeof(Card))]
 public class BoardAddCardModel
@@ -99,11 +108,10 @@ public class BoardAddCardModel
     [StringLength(Card.MaxDescriptionLength)]
     public string Description { get; set; }
 
-    public long OwnerId { get; set; }
-
     public decimal Amount { get; set; }
 }
 
+[AutoMap(typeof(Debt))]
 public class DebtDto : EntityDto<long>
 {
     [StringLength(Debt.MaxDescriptionLength)]
@@ -130,7 +138,10 @@ public class SponsorModel : EntityDto<long>
 public interface IProjectAppService : IAsyncCrudAppService<BoardModel, long, GetAllBoardModel, CreateBoardModel, UpdateBoardModel, GetBoardModel, DeleteBoardModel>
 {
     Task<BoardModel> AddCardsAsync(BoardAddCardModel input);
+
     Task<BoardModel> AddMembersAsync(BoardAddMemberModel input);
+
+    Task<List<BoardModel>> GetBoardsByUserAsync();
 }
 
 [AbpAuthorize]
@@ -139,10 +150,21 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
 {
     protected override Task<Board> GetEntityByIdAsync(long id)
     {
-        var entity = Repository.GetAllIncluding(x => x.Owner, x => x.Members, x => x.Cards)
-            .Include(x => x.Cards).ThenInclude(x => x.Debts).FirstOrDefault(x => x.Id == id);
+        var entity = Repository.GetAll()
+        .Include(x => x.Owner)
+        .Include(x => x.Members)
+        .Include(x => x.Cards).ThenInclude(x => x.CardOwner)
+        .Include(x => x.Cards).ThenInclude(x => x.Debts)
+        .FirstOrDefault(x => x.Id == id);
+
 
         return Task.FromResult(entity);
+    }
+
+    public override Task<BoardModel> GetAsync(GetBoardModel input)
+    {
+        var result = base.GetAsync(input);
+        return result;
     }
 
     public override async Task<BoardModel> CreateAsync(CreateBoardModel input)
@@ -153,7 +175,11 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
             throw new UserFriendlyException("User not found");
         }
         var entity = MapToEntity(input);
+
         entity.OwnerId = AbpSession.UserId ?? 0;
+        var userQuery = await userStore.GetUsersAsync();
+        var user = userQuery.Where(x => x.Id == AbpSession.GetUserId()).First();
+        entity.Members = new List<User> { user };
         await Repository.InsertAsync(entity);
         UnitOfWorkManager.Current.SaveChanges();
 
@@ -177,13 +203,21 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
 
     public async Task<BoardModel> AddCardsAsync(BoardAddCardModel input)
     {
-        var entity = Repository.Get(input.BoardId);
+        var entity = Repository.GetAllIncluding(x => x.Cards).First(x => x.Id == input.BoardId);
         var cardEntity = ObjectMapper.Map<Card>(input);
-        cardEntity.Board = entity;
-        cardRepository.Insert(cardEntity);
+        cardEntity.OwnerId = AbpSession.UserId ?? 0;
+        entity.Cards.AddIfNotContains(cardEntity);
+        Repository.Update(entity);
         UnitOfWorkManager.Current.SaveChanges();
-
         return ObjectMapper.Map<BoardModel>(entity);
+    }
+
+    public Task<List<BoardModel>> GetBoardsByUserAsync()
+    {
+        var entities = Repository.GetAllIncluding(x => x.Owner, x => x.Members, x => x.Cards)
+            .Where(x => x.OwnerId == AbpSession.UserId || x.Members.Any(y => y.Id == AbpSession.UserId)).Select(x => ObjectMapper.Map<BoardModel>(x)).ToListAsync();
+
+        return entities;
     }
 }
 

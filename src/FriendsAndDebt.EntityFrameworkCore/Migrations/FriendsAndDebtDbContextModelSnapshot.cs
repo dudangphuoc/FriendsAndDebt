@@ -1694,6 +1694,8 @@ namespace FriendsAndDebt.Migrations
 
                     b.HasIndex("BoardId");
 
+                    b.HasIndex("OwnerId");
+
                     b.ToTable("Cards");
                 });
 
@@ -2106,12 +2108,20 @@ namespace FriendsAndDebt.Migrations
                         .HasForeignKey("BoardId")
                         .OnDelete(DeleteBehavior.Restrict);
 
+                    b.HasOne("FriendsAndDebt.Authorization.Users.User", "CardOwner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Board");
+
+                    b.Navigation("CardOwner");
                 });
 
             modelBuilder.Entity("FriendsAndDebt.FAD.Debt", b =>
                 {
-                    b.HasOne("FriendsAndDebt.FAD.Card", null)
+                    b.HasOne("FriendsAndDebt.FAD.Card", "Card")
                         .WithMany("Debts")
                         .HasForeignKey("CardId");
 
@@ -2126,6 +2136,8 @@ namespace FriendsAndDebt.Migrations
                     b.HasOne("FriendsAndDebt.Authorization.Users.User", "Sponsor")
                         .WithMany()
                         .HasForeignKey("SponsorId");
+
+                    b.Navigation("Card");
 
                     b.Navigation("Creditor");
 
