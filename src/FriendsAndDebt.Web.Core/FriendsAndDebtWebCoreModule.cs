@@ -63,6 +63,8 @@ namespace FriendsAndDebt
             tokenAuthConfig.Audience = _appConfiguration["Authentication:JwtBearer:Audience"];
             tokenAuthConfig.SigningCredentials = new SigningCredentials(tokenAuthConfig.SecurityKey, SecurityAlgorithms.HmacSha256);
             tokenAuthConfig.Expiration = TimeSpan.FromDays(1);
+            //tokenAuthConfig.Expiration = TimeSpan.FromMinutes(5);
+            //tokenAuthConfig.Expiration = TimeSpan.FromSeconds(10);
         }
 
         public override void Initialize()

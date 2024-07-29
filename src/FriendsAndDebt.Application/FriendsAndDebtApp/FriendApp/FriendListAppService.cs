@@ -10,6 +10,8 @@ namespace FriendsAndDebt.FriendsAndDebtApp.FriendApp;
 [AbpAuthorize]
 public class FriendListAppService(IRepository<Friend, long> repository) : AsyncCrudAppService<Friend, FriendModel, long, GetAllFriendModel, CreateFriendModel, UpdateFriendModel, GetFriendModel, DeleteFriendModel>(repository), IProjectAppService
 {
+
+
     public Task ApproveAsync(long id)
     {
         var entity = Repository.Get(id);

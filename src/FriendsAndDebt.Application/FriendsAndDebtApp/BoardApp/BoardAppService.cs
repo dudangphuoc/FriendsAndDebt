@@ -11,6 +11,7 @@ using FriendsAndDebt.FAD;
 using FriendsAndDebt.Users.Dto;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -38,8 +39,8 @@ public class UpdateBoardModel : CreateBoardModel, IEntityDto<long>
 [AutoMap(typeof(Board))]
 public class CreateBoardModel
 {
-    [StringLength(Board.MaxColorLength)]
-    public string? Color { get; set; }
+    //[StringLength(Board.MaxColorLength)]
+    //public string? Color { get; set; }
 
     [StringLength(Board.MaxNameLength)]
     public string Name { get; set; }
@@ -80,6 +81,8 @@ public class CardDto : EntityDto<long>
 
     public decimal Amount { get; set; }
     public long OwnerId { get; set; }
+
+    public DateTime CreationTime { get; set; }
 
     [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
     public UserDto CardOwner { get; }

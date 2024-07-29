@@ -9,6 +9,7 @@ using Abp.Linq.Extensions;
 using Abp.Localization;
 using Abp.Runtime.Session;
 using Abp.UI;
+using F23.StringSimilarity;
 using FriendsAndDebt.Authorization;
 using FriendsAndDebt.Authorization.Roles;
 using FriendsAndDebt.Authorization.Users;
@@ -158,8 +159,12 @@ namespace FriendsAndDebt.Users
 
         protected override IQueryable<User> CreateFilteredQuery(PagedUserResultRequestDto input)
         {
+            //Jaro - Winkler
+            var distance = new JaroWinkler();
+            //distance.Distance("kitten", "sitting");
             return Repository.GetAllIncluding(x => x.Roles)
-                .WhereIf(!input.Keyword.IsNullOrWhiteSpace(), x => x.UserName.Contains(input.Keyword) || x.Name.Contains(input.Keyword) || x.EmailAddress.Contains(input.Keyword))
+                .WhereIf(!input.Keyword.IsNullOrWhiteSpace(),
+                    x => distance.Distance(x.UserName, input.Keyword) < 2 || distance.Distance(x.Name, input.Keyword) < 2 || distance.Distance(x.EmailAddress, input.Keyword) < 2)
                 .WhereIf(input.IsActive.HasValue, x => x.IsActive == input.IsActive);
         }
 
