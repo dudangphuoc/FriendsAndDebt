@@ -10,6 +10,6 @@ public class FriendApprovedEvent : IEventData
     {
         FriendId = friend;
     }
-    public DateTime EventTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public object EventSource { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public DateTime EventTime { get; set; }
+    public object EventSource { get; set; }
 }

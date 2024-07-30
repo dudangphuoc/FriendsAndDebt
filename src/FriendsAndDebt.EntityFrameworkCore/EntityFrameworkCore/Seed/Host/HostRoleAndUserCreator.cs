@@ -1,5 +1,3 @@
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
@@ -8,7 +6,9 @@ using FriendsAndDebt.Authorization;
 using FriendsAndDebt.Authorization.Roles;
 using FriendsAndDebt.Authorization.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Linq;
 
 namespace FriendsAndDebt.EntityFrameworkCore.Seed.Host
 {
@@ -24,6 +24,7 @@ namespace FriendsAndDebt.EntityFrameworkCore.Seed.Host
         public void Create()
         {
             CreateHostRoleAndUsers();
+            //CreateTestUsers();
         }
 
         private void CreateHostRoleAndUsers()
@@ -92,6 +93,33 @@ namespace FriendsAndDebt.EntityFrameworkCore.Seed.Host
                 _context.SaveChanges();
 
                 _context.SaveChanges();
+            }
+        }
+
+        private void CreateTestUsers()
+        {
+            for (int i = 1; i < 1000; i++)
+            {
+                var userName = $"raiden_{i}";
+                var userTest = _context.Users.IgnoreQueryFilters().FirstOrDefault(u => u.TenantId == 1 && u.UserName == userName);
+                if (userTest == null)
+                {
+                    var user = new User
+                    {
+                        TenantId = 1,
+                        UserName = userName,
+                        Name = $"{i} Raiden ",
+                        Surname = $"Gates",
+                        EmailAddress = $"{userName}@aspnetboilerplate.com",
+                        IsEmailConfirmed = true,
+                        IsActive = true
+                    };
+                    user.Password = new PasswordHasher<User>(new OptionsWrapper<PasswordHasherOptions>(new PasswordHasherOptions())).HashPassword(user, "123qwe");
+                    user.SetNormalizedNames();
+                    userTest = _context.Users.Add(user).Entity;
+
+                    _context.SaveChanges();
+                }
             }
         }
     }

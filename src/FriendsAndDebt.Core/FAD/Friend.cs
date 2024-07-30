@@ -6,6 +6,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace FriendsAndDebt.FAD;
 
+public enum FriendFilterType
+{
+    Friends = 0,
+    FriendRequests = 1,
+    SendRequests = 2
+}
+
 public class Friend : AggregateRoot<long>
 {
     public const int MaxIntroduceLength = 64;

@@ -4,6 +4,7 @@ using Abp.Reflection.Extensions;
 using FriendsAndDebt.Authorization;
 using FriendsAndDebt.FAD;
 using FriendsAndDebt.FriendsAndDebtApp.BoardApp;
+using FriendsAndDebt.FriendsAndDebtApp.FriendApp.Dto;
 
 namespace FriendsAndDebt
 {
@@ -27,6 +28,10 @@ namespace FriendsAndDebt
             {
                 config.CreateMap<Card, CardDto>()
                        .ForMember(x => x.CardOwner, opt => opt.MapFrom(x => x.CardOwner));
+
+                config.CreateMap<Friend, FriendModel>()
+                      .ForMember(x => x.OwnerName, opt => opt.MapFrom(x => x.Owner.FullName))
+                      .ForMember(x => x.FriendName, opt => opt.MapFrom(x => x.User.FullName));
 
             });
             Configuration.Modules.AbpAutoMapper().Configurators.Add(
