@@ -33,6 +33,8 @@ public class CreateFriendModel
 
 public class GetAllFriendModel : PagedResultRequestDto
 {
+    public string? Keywork { get; set; }
+    public long? BoardId { get; set; }
     public FriendFilterType RequestType { get; set; }
 }
 
@@ -45,4 +47,8 @@ public class FriendModel : EntityDto<long>
     public string OwnerName { get; set; }
 
     public string FriendName { get; set; }
+
+    public long OwnerId { get; set; }
+
+    public long UserId { get; set; }
 }

@@ -4,6 +4,7 @@ using FriendsAndDebt.Authorization.Users;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace FriendsAndDebt.FAD;
 
 public enum FriendFilterType
@@ -60,7 +61,6 @@ public class Board : FullAuditedAggregateRoot<long>
 
     public ICollection<Card> Cards { get; set; }
 }
-
 
 public class Card : FullAuditedAggregateRoot<long>
 {

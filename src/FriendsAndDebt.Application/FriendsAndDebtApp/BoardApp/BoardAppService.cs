@@ -95,7 +95,7 @@ public class CardDto : EntityDto<long>
 [AutoMap(typeof(Board))]
 public class BoardAddMemberModel : EntityDto<long>
 {
-    public string[] UserNames { get; set; }
+    public long UserId { get; set; }
 }
 
 
@@ -148,7 +148,7 @@ public interface IProjectAppService : IAsyncCrudAppService<BoardModel, long, Get
 }
 
 [AbpAuthorize]
-public class BoardAppService(IRepository<Board, long> repository, UserStore userStore, IRepository<Card, long> cardRepository)
+public class BoardAppService(IRepository<Board, long> repository, UserStore userStore, UserManager userManager, IRepository<Card, long> cardRepository)
     : AsyncCrudAppService<Board, BoardModel, long, GetAllBoardModel, CreateBoardModel, UpdateBoardModel, GetBoardModel, DeleteBoardModel>(repository), IProjectAppService
 {
     protected override Task<Board> GetEntityByIdAsync(long id)
@@ -191,13 +191,11 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
 
     public async Task<BoardModel> AddMembersAsync(BoardAddMemberModel input)
     {
-        var entity = Repository.Get(input.Id);
-        foreach (string item in input.UserNames)
-        {
-            var user = await userStore.GetUserFromDatabaseAsync(item);
-            entity.Members.AddIfNotContains(user);
-        }
+        var entity = Repository.GetAllIncluding(x => x.Members).First(x => x.Id == input.Id);
 
+        var user = await userManager.GetUserByIdAsync(input.UserId);
+
+        entity.Members.AddIfNotContains(user);
         Repository.Update(entity);
         UnitOfWorkManager.Current.SaveChanges();
 
@@ -222,5 +220,6 @@ public class BoardAppService(IRepository<Board, long> repository, UserStore user
 
         return entities;
     }
+
 }
 
